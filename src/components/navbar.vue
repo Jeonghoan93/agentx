@@ -6,10 +6,13 @@ const headersElements: {
   subItems: { title: string; route: string }[]
 }[] = [
   {
+    title: 'Investors',
+    subItems: [{ title: 'Pitch Deck', route: '/investors' }]
+  },
+  {
     title: 'Products',
     subItems: [
-      { title: 'Software Engineer', route: '/products/software-engineer' },
-      { title: 'HR', route: '/products/hr' },
+      { title: 'AI Solutions & Integrations', route: '/products/hr' },
       { title: 'Robotics', route: '/products/robotics' }
     ]
   },
@@ -53,6 +56,7 @@ const onClickNavigateToLinkedin = () => {
           </span>
         </div>
 
+        <!-- Desktop View -->
         <div class="flex flex-row gap-4 items-center">
           <template v-for="(header, index) in headersElements" :key="index">
             <v-menu>
@@ -91,6 +95,9 @@ const onClickNavigateToLinkedin = () => {
             <span class="font-semibold"> Sign up now </span>
           </v-btn>
         </div>
+
+        <!-- Mobile View -->
+        <!-- TODO: Create Mobile View -->
       </div>
     </v-container>
   </header>
